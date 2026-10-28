@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ArrowDownRight } from "lucide-react";
-
+import Rishi from '../images/rishi.jpeg'
 export default function Home({ setCurrentPage }) {
   const [isHovered, setIsHovered] = useState(false);
   const [animationStage, setAnimationStage] = useState(0); // 0: Together in center, 1: Split apart & show image, 2: Back together
@@ -66,7 +66,7 @@ export default function Home({ setCurrentPage }) {
   <div className="w-full max-w-xs sm:max-w-sm md:max-w-md p-4 rounded-[2.5rem] bg-[#FAF9F6] border border-[#EAE6DF] shadow-lg hover:shadow-xl transition-all duration-500 group">
     <div className="flex justify-center items-center w-full h-64 sm:h-80 rounded-[2rem] overflow-hidden bg-[#F0ECE1] border border-[#DCD6C9] relative">
       <img 
-        src="/public/rishi.jpeg" 
+        src={Rishi} 
         alt="Rishi M." 
         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
         onError={(e) => { e.target.style.display = 'none'; }}
